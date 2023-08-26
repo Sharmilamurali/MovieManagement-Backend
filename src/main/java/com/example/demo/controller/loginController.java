@@ -22,7 +22,10 @@ public class loginController {
 
     @Autowired
     private KafkaTemplate<String,String> kafkaTemplate;
-
+    @GetMapping("/test")
+    public String test(){
+        return "hiii";
+    }
     @PostMapping(value = "/login")
 
     public ResponseEntity<?> performLogin(@RequestBody UserDTO userdto) throws RestClientException, Exception {
