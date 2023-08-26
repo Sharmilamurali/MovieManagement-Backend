@@ -26,7 +26,7 @@ public class loginController {
     @PostMapping(value = "/login")
 
     public ResponseEntity<?> performLogin(@RequestBody UserDTO userdto) throws RestClientException, Exception {
-        String baseUrl = "http://3.93.78.221:8084/auth/v1/login";
+        String baseUrl = "http://localhost:8084/auth/v1/login";
         String msg= "AuthenticationRequired";
 
         RestTemplate restTemplate = new RestTemplate();
